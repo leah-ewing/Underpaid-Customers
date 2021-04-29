@@ -1,7 +1,7 @@
 melon_cost = 1.00
 
 def customer_data(file_path):
-    """function takes in a file path and returns in customer information
+    """function takes in a file path and returns customer information
 
     reads file path and returns whether a customer has over or underpaid
     for their melons"""
@@ -22,7 +22,7 @@ def customer_data(file_path):
             print(f"{customer_name} *UNDERPAID!* paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
             #if statement checks if the expected amount is more than amount customer paid
         elif customer_expected < customer_paid:
-            print(f"{customer_name} OVERPAID! paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
+            print(f"{customer_name}OVERPAID! paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
             #elif statement checks if the expected amount is less than amount customer paid
         elif customer_expected == customer_paid:
             print(f"{customer_name} paid correctly! paid: ${customer_paid:.2f}")
