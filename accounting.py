@@ -9,7 +9,6 @@ def customer_data(file_path):
     data_report = open(file_path) #opens input file
 
     for line in data_report:
-        line = line.rstrip()
         words = line.split('|') #splits words at the '|' symbol
 
         customer_name = words[1] #sets customer name as second column as file
