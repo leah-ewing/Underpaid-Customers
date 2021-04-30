@@ -17,8 +17,15 @@ def customer_data(file_path):
         customer_expected = customer_melons * melon_cost 
         #sets amount customer expected to pay as the number of melons bought multiplied by the melon's cost
         
-        if customer_expected != customer_paid:
-            print(f"{customer_name} paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
-            #if statement checks if the expected amount equals amount customer paid
+        if customer_expected > customer_paid:
+            print(f"{customer_name} *UNDERPAID!* paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
+             #if statement checks if the expected amount is more than amount customer paid
+        elif customer_expected < customer_paid:
+             print(f"{customer_name} OVERPAID! paid: ${customer_paid:.2f}, expected ${customer_expected:.2f}")
+             #elif statement checks if the expected amount is less than amount customer paid
+        elif customer_expected == customer_paid:
+            print(f"{customer_name} paid correctly! paid: ${customer_paid:.2f}")
+             #elif statement checks if the expected amount equals amount customer paid        
+            
 
 customer_data("customer-orders.txt")
